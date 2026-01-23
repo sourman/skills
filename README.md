@@ -10,6 +10,8 @@ Each skill is in its own directory under `skills/`:
 skills/
 ├── supabase-workflow/
 │   └── SKILL.md
+├── skill-create/
+│   └── SKILL.md
 └── [other-skills]/
     └── SKILL.md
 ```
@@ -20,10 +22,13 @@ Install individual skills using `bun x skills`:
 
 ```bash
 # Install a specific skill
-bun x skills add <username>/agent-skills/skills/supabase-workflow
+bun x skills add sourman/agent-skills/skills/supabase-workflow
 
 # List installed skills
 bun x skills list
+
+# Check for updates
+bun x skills check
 ```
 
 ## Skills
@@ -31,9 +36,29 @@ bun x skills list
 ### [supabase-workflow](skills/supabase-workflow/SKILL.md)
 Supabase database migrations, type generation, edge function management, and best practices.
 
+### [skill-create](skills/skill-create/SKILL.md)
+Instructions for AI agents to create new skills and add them to this repository.
+
 ## Contributing
 
-Add new skills by creating a new directory under `skills/` with a `SKILL.md` file.
+To add a new skill to this repository:
+
+```bash
+# Clone the repository
+git clone git@github.com:sourman/agent-skills.git /tmp/agent-skills
+cd /tmp/agent-skills
+
+# Install the skill-create skill first
+bun x skills add sourman/agent-skills/skills/skill-create
+
+# Then invoke the skill to create new skills
+```
+
+The `skill-create` skill provides complete instructions for:
+- Creating new skill directories
+- Writing proper SKILL.md files with frontmatter
+- Committing and pushing changes
+- Best practices for skill structure
 
 ## Resources
 
