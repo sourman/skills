@@ -1,25 +1,29 @@
 ---
 name: skill-create
-description: Instructions for AI agents to create new skills and add them to the agent-skills repository
+description: Instructions for AI agents to create new skills and add them to the skills repository
 ---
 
 # Purpose
 
-This skill instructs AI agents on how to create new skills and add them to the shared `agent-skills` repository at `https://github.com/sourman/agent-skills`.
+This skill instructs AI agents on how to create new skills and add them to the shared `skills` repository at `https://github.com/sourman/skills`.
 
 # Repository Location
 
-The agent-skills repository is located at:
-- **Remote:** `https://github.com/sourman/agent-skills`
-- **Local working copy:** `/tmp/agent-skills` (or `~/agent-skills` in some environments)
+The skills repository is located at:
+- **Remote:** `https://github.com/sourman/skills`
+- **Local working copy:** `/tmp/skills` (or `~/skills` in some environments)
 
 # Skill Structure
 
-Each skill follows this structure:
+Each skill is a directory at the repository root containing a `SKILL.md` file:
+
 ```
 skills/
-└── <skill-name>/
-    └── SKILL.md
+├── skill-name-1/
+│   └── SKILL.md
+├── skill-name-2/
+│   └── SKILL.md
+└── README.md
 ```
 
 The `SKILL.md` file must have:
@@ -31,23 +35,23 @@ The `SKILL.md` file must have:
 ## Step 1: Navigate to the Repository
 
 ```bash
-cd /tmp/agent-skills
+cd /tmp/skills
 # OR if it doesn't exist:
-git clone git@github.com:sourman/agent-skills.git /tmp/agent-skills
-cd /tmp/agent-skills
+git clone git@github.com:sourman/skills.git /tmp/skills
+cd /tmp/skills
 ```
 
 ## Step 2: Create the Skill Directory
 
 ```bash
-mkdir -p skills/<skill-name>
+mkdir <skill-name>
 ```
 
 Use **kebab-case** for skill names (e.g., `react-best-practices`, `typescript-eslint`, `docker-workflow`).
 
 ## Step 3: Create the SKILL.md File
 
-Create `skills/<skill-name>/SKILL.md` with the following structure:
+Create `<skill-name>/SKILL.md` with the following structure:
 
 ```markdown
 ---
@@ -90,26 +94,26 @@ Use this skill when:
 ## Step 4: Add and Commit to Git
 
 ```bash
-# Ensure you're on the main branch
-git checkout main
+# Ensure you're on the master branch
+git checkout master
 
 # Add the new skill
-git add skills/<skill-name>/
+git add <skill-name>/
 
 # Commit with a descriptive message
 git commit -m "Add <skill-name> skill"
 
-# If the main branch doesn't exist, you might be on master:
-git checkout master
+# If the master branch doesn't exist, you might be on main:
+git checkout main
 ```
 
 ## Step 5: Push to GitHub
 
 ```bash
 # Push the changes
-git push origin main
-# OR if on master:
 git push origin master
+# OR if on main:
+git push origin main
 ```
 
 # Example: Creating a New Skill
@@ -118,13 +122,13 @@ Here's a complete example of creating a skill called `git-workflow`:
 
 ```bash
 # 1. Navigate to repo
-cd /tmp/agent-skills
+cd /tmp/skills
 
 # 2. Create directory
-mkdir -p skills/git-workflow
+mkdir git-workflow
 
 # 3. Create SKILL.md
-cat > skills/git-workflow/SKILL.md << 'EOF'
+cat > git-workflow/SKILL.md << 'EOF'
 ---
 name: git-workflow
 description: Git best practices, branching strategies, and commit conventions
@@ -150,11 +154,11 @@ Follow conventional commits:
 EOF
 
 # 4. Commit
-git add skills/git-workflow/
+git add git-workflow/
 git commit -m "Add git-workflow skill"
 
 # 5. Push
-git push origin main
+git push origin master
 ```
 
 # Updating an Existing Skill
@@ -162,25 +166,25 @@ git push origin main
 To update an existing skill:
 
 ```bash
-cd /tmp/agent-skills
+cd /tmp/skills
 
 # Edit the skill file
-vim skills/<skill-name>/SKILL.md
+vim <skill-name>/SKILL.md
 
 # Commit and push
-git add skills/<skill-name>/SKILL.md
+git add <skill-name>/SKILL.md
 git commit -m "Update <skill-name> skill: describe changes"
-git push origin main
+git push origin master
 ```
 
 # Verifying the Skill
 
 After pushing, verify the skill is accessible:
 
-1. Check GitHub: https://github.com/sourman/agent-skills/tree/main/skills/<skill-name>
+1. Check GitHub: https://github.com/sourman/skills/tree/main/<skill-name>
 2. Test installation in another project:
    ```bash
-   bun x skills add sourman/agent-skills/skills/<skill-name>
+   bun x skills add sourman/skills/<skill-name>
    ```
 
 # Important Notes
@@ -212,5 +216,5 @@ git branch
 ## Permission Denied
 
 If you can't push:
-1. Verify you have push access to sourman/agent-skills
+1. Verify you have push access to sourman/skills
 2. Check that you're authenticated as the correct user: `gh auth status`

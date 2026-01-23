@@ -1,10 +1,10 @@
-# Agent Skills
+# Skills
 
 Collection of reusable skills for AI coding agents.
 
 ## Structure
 
-Each skill is in its own directory under `skills/`:
+Each skill is in its own directory at the repository root:
 
 ```
 skills/
@@ -22,7 +22,7 @@ Install individual skills using `bun x skills`:
 
 ```bash
 # Install a specific skill
-bun x skills add sourman/agent-skills/skills/supabase-workflow
+bun x skills add sourman/skills/supabase-workflow
 
 # List installed skills
 bun x skills list
@@ -33,10 +33,10 @@ bun x skills check
 
 ## Skills
 
-### [supabase-workflow](skills/supabase-workflow/SKILL.md)
+### [supabase-workflow](supabase-workflow/SKILL.md)
 Supabase database migrations, type generation, edge function management, and best practices.
 
-### [skill-create](skills/skill-create/SKILL.md)
+### [skill-create](skill-create/SKILL.md)
 Instructions for AI agents to create new skills and add them to this repository.
 
 ## Contributing
@@ -45,11 +45,11 @@ To add a new skill to this repository:
 
 ```bash
 # Clone the repository
-git clone git@github.com:sourman/agent-skills.git /tmp/agent-skills
-cd /tmp/agent-skills
+git clone git@github.com:sourman/skills.git /tmp/skills
+cd /tmp/skills
 
 # Install the skill-create skill first
-bun x skills add sourman/agent-skills/skills/skill-create
+bun x skills add sourman/skills/skill-create
 
 # Then invoke the skill to create new skills
 ```
