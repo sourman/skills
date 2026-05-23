@@ -1,0 +1,14 @@
+year,opening_ucc,additions,dispositions,cca_claimed,closing_ucc,equipment_net,notes
+2022,0.00,0.00,0.00,0.00,0.00,0.00,
+2023,0.00,0.00,0.00,0.00,0.00,0.00,
+2024,0.00,0.00,0.00,0.00,0.00,0.00,
+2025,0.00,0.00,0.00,0.00,0.00,0.00,
+
+# CCA Classes for a software/services CCPC:
+# Class 50 (55%): Computers, laptops, servers, monitors
+# Class 12 (100%): One-time software purchases
+# Class 8 (20%): Office furniture, smartphones
+# Class 14.1 (5%): Incorporation costs over $3,000
+#
+# Strategy: Claim $0 CCA in all loss years to preserve UCC for profitable years.
+# Verify: opening_ucc + additions - dispositions - cca_claimed = closing_ucc

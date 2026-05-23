@@ -1,0 +1,19 @@
+gifi_code,gifi_name,amount
+8000,Revenue from sales of goods and services,0.00
+8800,Advertising and promotion,0.00
+8840,Consulting and professional fees,0.00
+8871,Management and administration fees,0.00
+8880,Insurance,0.00
+8890,Interest and bank charges,0.00
+8910,Meals and entertainment (50% deductible),0.00
+8920,Office supplies and expenses,0.00
+8940,Rent,0.00
+8960,Salaries wages and benefits,0.00
+8970,Subcontracting costs,0.00
+8980,Travel,0.00
+9060,Business taxes licences and memberships,0.00
+9110,Telephone and communication,0.00
+9180,Computer software and supplies,0.00
+9220,Foreign exchange loss,0.00
+9270,Other operating expenses,0.00
+9999,Net income (loss),0.00

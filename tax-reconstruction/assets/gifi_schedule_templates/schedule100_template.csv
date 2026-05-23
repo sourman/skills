@@ -1,0 +1,22 @@
+item,amount
+# ASSETS
+## Current Assets
+Cash,0.00
+## Capital Assets (net)
+Equipment_net,0.00
+TOTAL_ASSETS,0.00
+
+# LIABILITIES
+## Current Liabilities
+Due_to_shareholder,0.00
+TOTAL_LIABILITIES,0.00
+
+# SHAREHOLDER EQUITY
+Share_capital,0.00
+Retained_earnings_beginning,0.00
+Net_income_loss,0.00
+Retained_earnings_end,0.00
+TOTAL_EQUITY,0.00
+
+# VERIFICATION
+# TOTAL_ASSETS must equal TOTAL_LIABILITIES + TOTAL_EQUITY
