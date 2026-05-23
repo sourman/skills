@@ -1,5 +1,5 @@
 ---
-name: tax-reconstruction
+name: canadian-t2-filing
 description: Reconstruct years of unfiled corporate taxes from chaotic financial records. Use when the user has PDFs, CSVs, or bank statements they need turned into tax filings, or mentions overdue corporate taxes, expense categorization, GIFI schedules, or HST recovery.
 ---
 

@@ -36,8 +36,8 @@ bun x skills check
 ### [supabase-workflow](supabase-workflow/SKILL.md)
 Supabase database migrations, type generation, edge function management, and best practices.
 
-### [tax-reconstruction](tax-reconstruction/SKILL.md)
-Reconstruct years of unfiled corporate taxes from chaotic financial records using iterative AI-assisted data extraction, categorization, and CRA form generation.
+### [canadian-t2-filing](canadian-t2-filing/SKILL.md)
+Canadian corporate T2 tax filing pipeline — from chaotic PDFs and bank statements to GIFI schedules, HST recovery, and accountant-ready outputs.
 
 ### [skill-create](skill-create/SKILL.md)
 Instructions for AI agents to create new skills and add them to this repository.
